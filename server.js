@@ -2,7 +2,7 @@
 const express = require('express');  // Подключаем Express (каркас сервера)
 const { query } = require('./database.js'); // Подключаем нашу функцию query из database.js
 const app = express();  // Создаем приложение Express
-const port = 3000;      // Порт, на котором будет работать сайт
+const port = process.env.PORT || 3000;      // Порт, на котором будет работать сайт
 
 // 2. Настраиваем Express
 app.use(express.urlencoded({ extended: true })); // Позволяет читать данные из форм
